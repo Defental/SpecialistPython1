@@ -2,3 +2,11 @@
 # Вывести на экран сумму всех положительных элементов.
 
 # TODO: your code here
+
+el = [3, -9, 5, 1, -3, 8]
+
+n = 0
+for numbers in el:
+    if numbers > 0:
+        n += numbers
+print(n)
