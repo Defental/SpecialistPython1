@@ -2,3 +2,10 @@
 # Вывести на экран сумму всех элементов.
 
 # TODO: your code here
+
+el = [3, -9, 5, 1, -3, 8]
+sum = 0
+
+for n in el:
+    sum += n
+print(sum) 
