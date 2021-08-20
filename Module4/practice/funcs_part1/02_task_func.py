@@ -5,6 +5,11 @@
 
 def palindrome(number):
     pass
+    number = str(number)
+
+    if number [::] == number[:: -1]:
+        return True
+    return False
 
 
 # Тестируем функцию
