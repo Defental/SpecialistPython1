@@ -7,4 +7,9 @@
 
 def pagination(num_items, items_on_page):
     pass
+    result = num_items // items_on_page
+    if 0 < num_items % items_on_page < items_on_page:
+        result += 1
+    return result
+print(pagination(10, 2))
 
