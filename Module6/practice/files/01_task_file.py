@@ -6,14 +6,32 @@
 # 3. Узнайте количество стихотворений, если известно,
 # что каждое стихотворение отделяется ровно одной пустой строкой от предыдущего и после последнего нет пустой строки
 
-path = "dir/limericks.txt"  # вместо dir подставь название папки с файлом.
+path = "limericks.txt"  # вместо dir подставь название папки с файлом.
 # Или удалите dir, если limericks.txt в тойже папке что и текущий файл
 
 # Открываем файл на чтение
-f = open(path, "r")
+f = open("limericks.txt", "r", encoding="utf-8")
 # В переменную line считываем строку за стройкой из файла(f)
 for line in f:
-    ...
+    print(line.rsplit())
+
+    print("____________________")
+
+f.seek(0)
+res = f.readline()
+line = " ".join(res)
+spacers = [" ", "\n", "\t"]
+for space in spacers:
+    line = line.replace(space, "")
+print(len(line))
+
+f.seek(0)
+count_limericks = 1
+for line in f:
+    if line.strip() == "":
+        count_limericks += 1
+print(count_limericks)
+
 
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
